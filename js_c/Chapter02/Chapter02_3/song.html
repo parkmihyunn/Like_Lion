@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .dream{
+            width : 0px;
+            height: 5px;
+            background-color: rgb(255, 179, 246);
+        }
+        .lyrics{
+            width: 300px;
+            height: 150px;
+            overflow-y: scroll;
+            background-color: rgb(187, 237, 255);
+        }
+    </style>
+    <div class="dream"></div>
+    <div class="lyrics">
+        <p>
+            때로 너의 꿈은 가장 무거운 짐이 되지
+            괴로워도 벗어둘 수 없는 굴레
+            너의 꿈은 때로 비길 데 없는 위안
+            외로워도 다시 걷게 해주는
+            때로 다 버리고 다 털어버리고
+            다 지우고 다 잊어버리고
+            다시 시작하고 싶어
+            때로 너의 꿈은 가장 무서운 거울이라
+            초라한 널 건조하게 비추지
+            너의 꿈은 때로 마지막이 기대어 울 곳
+            가진 것 없는 너를 안아주는
+            간절히 원하는 건 이뤄진다고
+            이룬 이들은 웃으며 말하지
+            마치 너의 꿈은 꿈이 아닌 것처럼
+            소중하게 품에 안고 꿈을 꾸었네
+            작고 따뜻한 꿈
+            버릴 수 없는 애처로운 꿈
+            너의 꿈은 때로 무거운 짐이 되지
+            괴로워도 벗어둘 수 없는 굴레
+            너의 꿈은 때로 비교할 데 없는 위안
+            외로워도 다시 한 번 걷게 해주는
+            간절하게 원한다면 모두 이뤄질 거라 말하지 마
+            마치 나의 꿈은 꿈이 아닌 것처럼
+            마치 나의 꿈은 꿈이 아닌 것처럼
+        </p>
+    </div>
+    <script>
+        let bar = document.querySelector('.dream');
+        let lyric = document.querySelector('.lyrics');
+        lyric.addEventListener('scroll',function(){
+            let scrollTop = lyric.scrollTop;
+            let scrollHeight = lyric.scrollHeight - lyric.clientHeight;
+            let per = scrollTop / scrollHeight;
+            bar.style.width = `${per*300}px`;
+        });
+    </script>
+</body>
+</html>

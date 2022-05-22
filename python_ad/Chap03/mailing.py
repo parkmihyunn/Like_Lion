@@ -32,6 +32,6 @@ message.add_attachment(image_file, maintype='image',subtype=image_type)
 
 # 메일 서버 연결 후, 로그인
 smtp = smtplib.SMTP_SSL(SMTP_SERVER,SMTP_PORT)
-smtp.login("parkmihyunn@gmail.com","algus830385^^")
+smtp.login("parkmihyunn@gmail.com","password")
 sendEmail("parkmihyunn@gmail.com")
 smtp.quit()
