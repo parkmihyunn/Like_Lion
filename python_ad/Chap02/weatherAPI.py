@@ -1,7 +1,7 @@
 import requests
 import json
 
-apikey = "fdecba0fb6143d1e9e01348304ef288a"
+apikey = ""
 city = "Seoul"
 lang = "kr"
 unit = "metric"
